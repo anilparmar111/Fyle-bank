@@ -10,8 +10,8 @@ export class BankdetailsService {
   constructor(private http: HttpClient) { }
 
   private headers = new HttpHeaders().set('Content-Type', 'application/json');
-  // private baseUri="https://fylebank-rest-rapi.herokuapp.com";
-  private baseUri="http://127.0.0.1:8000";
+  private baseUri="https://fylebank-rest-rapi.herokuapp.com";
+  // private baseUri="http://127.0.0.1:8000";
 
   fetchdata(city : any)
   {

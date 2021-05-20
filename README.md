@@ -25,3 +25,13 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice.
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Live Demo [Heroku Link](https://fyle-bank-fronte.herokuapp.com/)
+
+## Features
+1.BookMark Some Of The Branch
+2.Based On Branch Selection Data Is Deisplayed
+3.User Can Able To Search Across All The Column
+4.API Calls Are Cached
+5.Based No Of Rows Pagination Table Is Displayed.

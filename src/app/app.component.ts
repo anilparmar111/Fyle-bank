@@ -43,7 +43,6 @@ export class AppComponent  {
 
   Search()
   {
-    console.log(this.srk);
     this.banks=this.tmp;
     if(this.srk=="")
     {
@@ -52,9 +51,31 @@ export class AppComponent  {
     else
     {
       this.srk=this.srk.toLowerCase();
-      this.banks=this.banks.filter(res =>{
-        return res.ifsc.toLocaleLowerCase().match(this.srk.toLocaleLowerCase());
-      })
+      let tr : Array<Bank> = new Array();
+
+      for(let i=0;i<this.banks.length;i++)
+      {
+        // console.log(this.banks[i]);
+        // console.log(this.banks[i].address);
+        if(this.banks[i].address.toLocaleLowerCase().match(this.srk)  || 
+        this.banks[i].branch.toLocaleLowerCase().match(this.srk) || this.banks[i].city.toLocaleLowerCase().match(this.srk) ||
+        this.banks[i].district.toLocaleLowerCase().match(this.srk) || this.banks[i].ifsc.toLocaleLowerCase().match(this.srk) ||
+        this.banks[i].state.toLocaleLowerCase().match(this.srk))
+        {
+          tr.push(this.banks[i]);
+          continue;
+        }
+        if(this.banks[i].bank_id==this.srk)
+        {
+          tr.push(this.banks[i]);
+        }
+      }
+      this.banks=tr;
+      // this.banks=this.banks.filter(res =>{
+
+      //   return res.ifsc.toLocaleLowerCase().match(this.srk.toLocaleLowerCase());
+      
+      // })
     };
 
   }

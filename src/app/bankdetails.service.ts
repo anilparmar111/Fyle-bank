@@ -15,7 +15,7 @@ export class BankdetailsService {
 
   fetchdata(city : any)
   {
-     return this.http.get<Bank[]>(this.baseUri + "/api/branches/?q="+city+"&limit=5000&offset=0", { headers: this.headers });
+     return this.http.get<Bank[]>(this.baseUri + "/api/branches/?q="+city+"&limit=11000 &offset=0", { headers: this.headers });
   }
 
 }

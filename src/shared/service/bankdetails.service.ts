@@ -17,5 +17,15 @@ export class BankdetailsService {
   {
      return this.http.get<Bank[]>(this.baseUri + "/api/branches/?q="+city+"&limit=11000 &offset=0", { headers: this.headers });
   }
+  private bank : any;
+
+  setData(bank : Bank)
+  {
+    this.bank=bank;
+  }
+  getData()
+  {
+    return this.bank;
+  }
 
 }

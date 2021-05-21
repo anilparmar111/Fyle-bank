@@ -7,8 +7,9 @@ export class Bank {
     city : string;
     district : string;
     state : string;
+    id : Number;
 
-    constructor(ifsc : any,bank_id : any,branch : any,address : any,city : any,district : any,state : any) {
+    constructor(ifsc : any,bank_id : any,branch : any,address : any,city : any,district : any,state : any,id : any) {
         this.address=address;
         this.bank_id=bank_id;
         this.branch=branch;
@@ -16,6 +17,7 @@ export class Bank {
         this.district=district;
         this.ifsc=ifsc;
         this.state=state;
+        this.id=id;
         
     }
     

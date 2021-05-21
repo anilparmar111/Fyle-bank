@@ -1,8 +1,6 @@
-import { Component, ViewChild,Input,ChangeDetectionStrategy } from '@angular/core';
-import { BankdetailsService } from './bankdetails.service';
-import {PaginationInstance} from 'ngx-pagination';
-
-import {Bank} from '../app/bank';
+import { Component, Input,ChangeDetectionStrategy } from '@angular/core';
+import { BankdetailsService } from "../shared/service/bankdetails.service";
+import { Bank } from "../shared/model/Bank";
 
 @Component({
   selector: 'app-root',
@@ -71,11 +69,7 @@ export class AppComponent  {
         }
       }
       this.banks=tr;
-      // this.banks=this.banks.filter(res =>{
-
-      //   return res.ifsc.toLocaleLowerCase().match(this.srk.toLocaleLowerCase());
       
-      // })
     };
 
   }
@@ -88,14 +82,12 @@ export class AppComponent  {
   onTableDataChange(event : any){
     this.page = event;
     this.banks=this.tmp;
-    // this.fetchPosts();
   }  
 
   onTableSizeChange(event : any): void {
     this.tableSize = event.target.value;
     this.page = 1;
     this.banks=this.tmp;
-    // this.fetchPosts();
   }  
 
 }

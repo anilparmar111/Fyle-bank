@@ -1,3 +1,8 @@
+For Rest Api You Can See This ## Repositry [Code Link](https://github.com/anilparmar111/fylebank-rest-api)
+
+For Rest Api You Can See This ## Website [Heroku Link](https://fyle-bank-fronte.herokuapp.com/)
+
+
 # FyleBankApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.0.
